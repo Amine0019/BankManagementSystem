@@ -72,6 +72,11 @@ public class Compte {
         }
     }
 
+    //methode pour afficher le solde actuel
+    void consulterSole(){
+        System.out.println("Le solde actuel du compte Bancaire est : " + solde);
+    }
+
 
 
 }

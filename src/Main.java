@@ -6,10 +6,10 @@ public class Main {
         compte1.saisirCompte();
 
         compte1.retirerArgent(200);
-        System.out.println("solde ="+compte1.getSolde());
+        compte1.consulterSole();
 
         compte1.deposerArgent(450);
-        System.out.println("solde ="+compte1.getSolde());
+        compte1.consulterSole();
 
     }
 }
