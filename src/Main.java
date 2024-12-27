@@ -1,6 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.printf("Hello and welcome!");
+        Compte compte1 = new Compte(1,"amine",980.00);
+
+        System.out.println("Veuillez saisir les informations du compte :");
+        compte1.saisirCompte();
 
 
     }

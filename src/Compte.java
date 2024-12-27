@@ -1,11 +1,13 @@
+import java.util.Scanner;
+
 public class Compte {
     // Declaration des attributs de classe
     private int numCompte;
     private String nomPropreitaire;
-    private float solde;
+    private double solde;
 
     // génération du constructeur par defaut
-    public Compte(int numCompte, String nomPropreitaire, float solde) {
+    public Compte(int numCompte, String nomPropreitaire, double solde) {
         this.numCompte = numCompte;
         this.nomPropreitaire = nomPropreitaire;
         this.solde = Math.max(solde, 0);
@@ -28,13 +30,34 @@ public class Compte {
         this.nomPropreitaire = nomPropreitaire;
     }
 
-    public float getSolde() {
+    public double getSolde() {
         return solde;
     }
 
-    public void setSolde(float solde) {
-        this.solde = solde;
+    public void setSolde(double solde) {
+        if (solde>0) {
+            this.solde = solde;
+        }
     }
+
+    //une méthode qui nous permet de saisir un compte bancaire
+    void saisirCompte() {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Veuillez saisir le numero de compte:");
+        this.numCompte = sc.nextInt();
+        sc.nextLine();
+
+        System.out.print(" Veuillez saisir le Nom du propreitaire : ");
+        this.nomPropreitaire = sc.nextLine();
+
+        System.out.println("Veuillez saisir le solde du compte bancaire: ");
+        this.solde = sc.nextDouble();
+        sc.nextLine();
+
+
+    }
+
 
 
 }
