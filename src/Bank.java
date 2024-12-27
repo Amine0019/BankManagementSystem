@@ -32,4 +32,18 @@ public class Bank {
     public void setComptes(Compte[] comptes) {
         this.comptes = comptes;
     }
+
+
+    public int searchCompte(Compte compte){
+        int index = -1;
+        for(int i = 0; i < comptes.length; i++){
+            if(comptes[i] == compte){
+                return i;
+            }
+        }
+        return index;
+    }
+
+
+
 }
