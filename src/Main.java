@@ -49,6 +49,17 @@ public class Main {
             System.out.println("Le Compte n'a pas été trouvé : ");
         }
 
+        //Test l'ajout d'un compte supplementaire
+        Compte compteSupplementaire = new Compte(6,"Elyes",6000);
+        bank.addCompte(compteSupplementaire);
+
+        // Tester l'ajout d'un compte quand la banque est pleine
+        Bank fullBank = new Bank("Banque Pleine");
+        for(int i=0;i<50;i++){
+            fullBank.addCompte(new Compte(i+1,"Client"+(i+1),1000));
+        }
+        fullBank.addCompte(new Compte(51,"Client51",1000));
+
 
 
     }

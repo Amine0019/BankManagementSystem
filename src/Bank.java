@@ -44,6 +44,18 @@ public class Bank {
         return index;
     }
 
+    //methode pour afficher un compte a la banque
+    void addCompte(Compte compte){
+        for(int i = 0; i < comptes.length; i++){
+            if(comptes[i] == null){
+                comptes[i] = compte;
+                System.out.println("Le compte a été ajouté par succé a la banque");
+                return;
+            }
+        }
+        System.out.println("La Banque est pleine impossible de ajouter un compte");
+    }
+
 
 
 }
