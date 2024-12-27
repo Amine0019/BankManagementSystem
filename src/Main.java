@@ -60,6 +60,9 @@ public class Main {
         }
         fullBank.addCompte(new Compte(51,"Client51",1000));
 
+        // Tester la méthode afficher Banque
+        bank.displayBanques();
+
 
 
     }
