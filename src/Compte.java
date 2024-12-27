@@ -44,18 +44,25 @@ public class Compte {
     void saisirCompte() {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Veuillez saisir le numero de compte:");
+        System.out.println("Veuillez saisir le numero de compte: \n");
         this.numCompte = sc.nextInt();
         sc.nextLine();
 
-        System.out.print(" Veuillez saisir le Nom du propreitaire : ");
+        System.out.print(" Veuillez saisir le Nom du propreitaire : \n ");
         this.nomPropreitaire = sc.nextLine();
 
-        System.out.println("Veuillez saisir le solde du compte bancaire: ");
+        System.out.println("Veuillez saisir le solde du compte bancaire: \n ");
         this.solde = sc.nextDouble();
         sc.nextLine();
 
 
+    }
+
+    //méthode pour retirer l'argent
+    void retirerArgent(double amount){
+        if(amount<=solde){
+            solde = solde-amount;
+        }
     }
 
 
