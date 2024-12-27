@@ -65,6 +65,13 @@ public class Compte {
         }
     }
 
+    //methode pour faire le versement de l'argent
+    void deposerArgent(double amount){
+        if(amount>0){
+            solde = solde+amount;
+        }
+    }
+
 
 
 }
